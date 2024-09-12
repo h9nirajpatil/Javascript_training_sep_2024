@@ -1,0 +1,11 @@
+JavaScript arrays are versatile data structures that allow you to store multiple values in a single variable. They can hold any type of data, including numbers, strings, objects, and even other arrays (multidimensional arrays). Here's a breakdown of key features and operations you can perform with arrays:
+1. Creating an Array
+You can create arrays in JavaScript using the Array constructor or by simply using square brackets [].
+// Using square brackets
+let fruits = ['Apple', 'Banana', 'Mango'];
+
+// Using the Array constructor
+let numbers = new Array(1, 2, 3, 4, 5);
+
+2. Accessing Elements
+Elements in an array can be accessed by their index, with the first element at index 0.

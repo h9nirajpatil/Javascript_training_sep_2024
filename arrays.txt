@@ -78,3 +78,109 @@ let matrix = [
 console.log(matrix[1][2]); // Output: 6
 
 Arrays are fundamental in JavaScript for managing lists of data and provide a wide range of methods to manipulate and iterate over them.
+
+---------------------------------------------------------------
+1. Array Length
+The length property returns the number of elements in an array.
+let arr = [1, 2, 3, 4];
+console.log(arr.length); // Output: 4
+Explanation: length gives the total number of elements in the array. In this example, arr has 4 elements, so it returns 4.
+---------------------------------------------------------------------
+2. Array toString()
+The toString() method converts an array into a comma-separated string.
+let fruits = ['Apple', 'Banana', 'Mango'];
+console.log(fruits.toString()); // Output: 'Apple,Banana,Mango'
+Explanation: This method joins all elements of the array and returns them as a string, separated by commas.
+-----------------------------------------------------------------------
+3. Array at()
+The at() method returns the element at the given index.
+let numbers = [10, 20, 30, 40];
+console.log(numbers.at(1)); // Output: 20
+console.log(numbers.at(-1)); // Output: 40 (last element)
+Explanation: Positive indexes start from 0, and negative indexes count from the end. numbers.at(1) returns the element at index 1, which is 20, and numbers.at(-1) returns the last element.
+--------------------------------------------------------------------------------
+4. Array join()
+The join() method joins array elements into a string, with a specified separator.
+let elements = ['Fire', 'Water', 'Earth'];
+console.log(elements.join(' & ')); // Output: 'Fire & Water & Earth'
+Explanation: join() concatenates all array elements, separated by & in this case. The default separator is a comma.
+--------------------------------------------------------------------------------
+5. Array pop()
+The pop() method removes the last element from an array and returns it.
+let fruits = ['Apple', 'Banana', 'Mango'];
+let lastFruit = fruits.pop();
+console.log(lastFruit); // Output: 'Mango'
+console.log(fruits); // Output: ['Apple', 'Banana']
+Explanation: pop() removes and returns the last element ('Mango') from the array, modifying the original array.
+----------------------------------------------------------------------------------
+6. Array push()
+The push() method adds one or more elements to the end of an array and returns the new length.
+let numbers = [1, 2, 3];
+numbers.push(4);
+console.log(numbers); // Output: [1, 2, 3, 4]
+Explanation: push() adds 4 to the end of the array.
+-----------------------------------------------------------------------------------
+7. Array shift()
+The shift() method removes the first element of an array and returns it.
+let fruits = ['Apple', 'Banana', 'Mango'];
+let firstFruit = fruits.shift();
+console.log(firstFruit); // Output: 'Apple'
+console.log(fruits); // Output: ['Banana', 'Mango']
+Explanation: shift() removes the first element ('Apple') and shifts the rest of the elements.
+-----------------------------------------------------------------------------------
+8. Array unshift()
+The unshift() method adds elements to the beginning of the array and returns the new length.
+let numbers = [2, 3, 4];
+numbers.unshift(1);
+console.log(numbers); // Output: [1, 2, 3, 4]
+Explanation: unshift() adds 1 at the beginning of the array.
+-----------------------------------------------------------------------------------
+9. Array delete
+The delete operator removes an element without changing the length of the array.
+let fruits = ['Apple', 'Banana', 'Mango'];
+delete fruits[1];
+console.log(fruits); // Output: ['Apple', <1 empty item>, 'Mango']
+Explanation: delete removes the element but leaves an empty slot in its place.
+-----------------------------------------------------------------------------------
+10. Array concat()
+The concat() method merges two or more arrays into a new array.
+let arr1 = [1, 2];
+let arr2 = [3, 4];
+let combined = arr1.concat(arr2);
+console.log(combined); // Output: [1, 2, 3, 4]
+Explanation: concat() combines arrays into a new one.
+-----------------------------------------------------------------------------------
+11. Array copyWithin()
+The copyWithin() method copies part of an array to another location in the same array.
+let arr = [1, 2, 3, 4, 5];
+arr.copyWithin(0, 3); 
+console.log(arr); // Output: [4, 5, 3, 4, 5]
+Explanation: copyWithin(0, 3) copies the part starting at index 3 to the beginning.
+----------------------------------------------------------------------------------
+12. Array flat()
+The flat() method flattens a nested array into a single array.
+let arr = [1, [2, [3, 4]]];
+console.log(arr.flat(2)); // Output: [1, 2, 3, 4]
+Explanation: flat(2) flattens the array up to 2 levels deep.
+-----------------------------------------------------------------------------------
+13. Array splice()
+The splice() method adds/removes items to/from an array.
+let fruits = ['Apple', 'Banana', 'Mango'];
+fruits.splice(1, 1, 'Orange');
+console.log(fruits); // Output: ['Apple', 'Orange', 'Mango']
+Explanation: splice(1, 1, 'Orange') replaces 'Banana' with 'Orange'.
+-----------------------------------------------------------------------------------
+14. Array indexOf()
+The indexOf() method returns the first index of a specified value.
+let numbers = [10, 20, 30, 40];
+console.log(numbers.indexOf(30)); // Output: 2
+Explanation: indexOf(30) returns the index where 30 is first found.
+-----------------------------------------------------------------------------------
+15. Array lastIndexOf()
+The lastIndexOf() method returns the last index of a specified value.
+let numbers = [10, 20, 30, 10];
+console.log(numbers.lastIndexOf(10)); // Output: 3
+Explanation: lastIndexOf(10) returns the last occurrence of 10.
+-----------------------------------------------------------------------------------
+
+

@@ -1,0 +1,486 @@
+1. JavaScript Strings
+In JavaScript, strings are sequences of characters enclosed in quotes. Strings can be written inside:
+
+Single quotes ('...')
+Double quotes ("...")
+Template literals (backticks: `...`)
+
+let singleQuoteString = 'Hello, World!';
+let doubleQuoteString = "Hello, World!";
+let templateString = `Hello, World!`;
+
+Explanation: You can use single or double quotes interchangeably, but template literals offer additional features like embedding expressions.
+
+___________________________________________________________________________
+
+2. Using Quotes
+When dealing with strings, you can choose between single (') and double (") quotes based on your needs. Both represent the same string type.
+
+
+let greeting = 'Hello, World!'; // Using single quotes
+let anotherGreeting = "Hi there!"; // Using double quotes
+
+Explanation: Both greeting and anotherGreeting are valid strings.
+
+___________________________________________________________________________
+
+3. Quotes Inside Quotes
+To use quotes inside other quotes, you must alternate between single and double quotes or escape them.
+
+let message = 'He said, "Hello!"';
+let anotherMessage = "It's a beautiful day!";
+
+Alternatively, you can use escape characters to include the same type of quotes inside a string.
+
+
+let escapedQuotes = 'He said, \"Hello!\"';
+
+Explanation: JavaScript allows for the use of both single and double quotes, but when you need the same type of quote inside the string, you escape it with a backslash (\).
+
+___________________________________________________________________________
+
+4. Template Strings
+Template strings (template literals) allow embedded expressions and multiline strings. They're enclosed by backticks (`) instead of quotes.
+
+let name = 'John';
+let greeting = `Hello, ${name}!`; // Embedding expression
+console.log(greeting); // Output: Hello, John!
+
+You can also create multiline strings without escape characters:
+
+let multiline = `This is
+a multiline
+string.`;
+
+Explanation: Template literals allow string interpolation (embedding variables using ${}) and support multiline text.
+
+___________________________________________________________________________
+
+5. String Length
+The length property returns the number of characters in a string.
+
+let str = "Hello";
+console.log(str.length); // Output: 5
+
+Explanation: length counts the number of characters, including spaces and special characters.
+
+___________________________________________________________________________
+
+6. Escape Characters
+Escape characters allow you to include special characters inside a string. Some common escape sequences:
+
+\' – Single quote
+\" – Double quote
+\\ – Backslash
+\n – New line
+\t – Tab
+
+let str = "Hello \"World\" \n Welcome!";
+console.log(str);
+/*
+Output:
+Hello "World" 
+Welcome!
+*/
+Explanation: Escape sequences let you insert special characters that can't be typed directly.
+
+___________________________________________________________________________
+
+7. Breaking Long Lines
+JavaScript doesn't allow breaking long strings directly across multiple lines using regular quotes. You can break lines in two ways:
+
+Using the backslash (\) at the end of the line to indicate continuation:
+
+let longString = "This is a very long string \
+that we can break across lines.";
+Using template literals for multiline strings:
+
+let longString = `This is a very long string
+that we can break across lines.`;
+
+Explanation: The backslash (\) or template literals allow you to manage long strings over multiple lines.
+
+___________________________________________________________________________
+
+8. JavaScript Strings as Objects
+Although strings are primitive data types, you can create string objects using the String constructor. However, this is rarely done as it complicates the code.
+
+
+let primitiveStr = "Hello";
+let objectStr = new String("Hello");
+
+console.log(typeof primitiveStr); // Output: string
+console.log(typeof objectStr); // Output: object
+
+Explanation: Primitive strings are preferred because they are simpler and more efficient, but string objects are possible by using the new String() constructor.
+
+___________________________________________________________________________
+
+JavaScript String Methods
+JavaScript strings are immutable, meaning all string methods return a new string without modifying the original one. Below is an overview of key string methods:
+
+1. String Length
+The length property returns the number of characters in a string, including spaces.
+
+
+let str = "Hello World!";
+console.log(str.length); // Output: 12
+
+Explanation: This gives the total character count in the string.
+
+___________________________________________________________________________
+
+
+2. charAt()
+The charAt() method returns the character at the specified index.
+
+
+let str = "Hello";
+console.log(str.charAt(1)); // Output: e
+
+Explanation: The method retrieves the character at index 1.
+
+___________________________________________________________________________
+
+
+3. charCodeAt()
+The charCodeAt() method returns the Unicode (UTF-16) value of the character at the specified index.
+
+let str = "A";
+console.log(str.charCodeAt(0)); // Output: 65
+
+Explanation: It returns the Unicode value of the character 'A', which is 65.
+
+___________________________________________________________________________
+
+
+4. at()
+The at() method returns the character at a specified index. It can also take negative indexes to count from the end.
+
+let str = "Hello";
+console.log(str.at(2));  // Output: l
+console.log(str.at(-1)); // Output: o
+
+Explanation: at() allows you to access characters using both positive and negative indices.
+
+___________________________________________________________________________
+
+
+5. String Access using [ ]
+You can access characters in a string using bracket notation (similar to arrays).
+
+let str = "Hello";
+console.log(str[1]); // Output: e
+
+Explanation: Bracket notation accesses the character at index 1, which is e.
+
+___________________________________________________________________________
+
+
+6. slice()
+The slice() method extracts a portion of a string and returns it as a new string.
+
+let str = "Hello, World!";
+console.log(str.slice(0, 5)); // Output: Hello
+console.log(str.slice(-6)); // Output: World!
+
+Explanation: slice(0, 5) extracts from index 0 to 5 (not including 5), and slice(-6) extracts from the 6th last character to the end.
+
+___________________________________________________________________________
+
+
+7. substring()
+The substring() method is similar to slice(), but it does not accept negative indexes.
+
+let str = "Hello, World!";
+console.log(str.substring(0, 5)); // Output: Hello
+
+Explanation: substring() extracts characters between two specified indices, starting from 0 up to (but not including) 5.
+
+___________________________________________________________________________
+
+
+8. substr()
+The substr() method extracts a part of a string, starting at a specified index and returning a specified number of characters.
+
+let str = "Hello, World!";
+console.log(str.substr(0, 5)); // Output: Hello
+
+Explanation: substr(0, 5) starts at index 0 and extracts the next 5 characters.
+
+___________________________________________________________________________
+
+
+9. toUpperCase()
+The toUpperCase() method converts a string to uppercase letters.
+
+let str = "hello";
+console.log(str.toUpperCase()); // Output: HELLO
+
+Explanation: Converts all characters in the string to uppercase.
+
+___________________________________________________________________________
+
+
+10. toLowerCase()
+The toLowerCase() method converts a string to lowercase letters.
+
+let str = "HELLO";
+console.log(str.toLowerCase()); // Output: hello
+
+Explanation: Converts all characters to lowercase.
+
+___________________________________________________________________________
+
+
+11. concat()
+The concat() method joins two or more strings.
+
+let str1 = "Hello";
+let str2 = "World";
+console.log(str1.concat(" ", str2)); // Output: Hello World
+
+Explanation: concat() combines strings together, with optional spaces or separators.
+
+___________________________________________________________________________
+
+
+12. trim()
+The trim() method removes whitespace from both ends of a string.
+
+let str = "  Hello World  ";
+console.log(str.trim()); // Output: "Hello World"
+
+Explanation: trim() removes any extra spaces from the beginning and end of the string.
+
+___________________________________________________________________________
+
+
+13. trimStart()
+The trimStart() method removes whitespace from the beginning of a string.
+
+let str = "   Hello";
+console.log(str.trimStart()); // Output: "Hello"
+
+Explanation: Only removes whitespace from the start.
+
+___________________________________________________________________________
+
+
+14. trimEnd()
+The trimEnd() method removes whitespace from the end of a string.
+
+let str = "Hello   ";
+console.log(str.trimEnd()); // Output: "Hello"
+
+Explanation: Only removes whitespace from the end.
+
+___________________________________________________________________________
+
+
+15. padStart()
+The padStart() method pads the current string with another string until it reaches the specified length.
+
+let str = "5";
+console.log(str.padStart(3, "0")); // Output: "005"
+
+Explanation: Pads the string from the beginning with "0" until it reaches a length of 3.
+
+___________________________________________________________________________
+
+
+16. padEnd()
+The padEnd() method pads the string from the end until it reaches the desired length.
+
+let str = "5";
+console.log(str.padEnd(3, "0")); // Output: "500"
+
+Explanation: Pads the string with "0" from the end to make its length 3.
+
+___________________________________________________________________________
+
+
+17. repeat()
+The repeat() method repeats the string a specified number of times.
+
+let str = "Hello";
+console.log(str.repeat(3)); // Output: "HelloHelloHello"
+
+Explanation: Repeats the string three times.
+
+___________________________________________________________________________
+
+
+18. replace()
+The replace() method replaces a specified value with another value in a string.
+
+let str = "Hello World!";
+console.log(str.replace("World", "JavaScript")); // Output: Hello JavaScript!
+
+Explanation: replace() finds the first instance of "World" and replaces it with "JavaScript".
+
+___________________________________________________________________________
+
+
+19. replaceAll()
+The replaceAll() method replaces all occurrences of a specified value in a string.
+
+let str = "apple apple apple";
+console.log(str.replaceAll("apple", "orange")); // Output: orange orange orange
+
+Explanation: replaceAll() replaces every occurrence of "apple" with "orange".
+
+___________________________________________________________________________
+
+
+20. split()
+The split() method splits a string into an array based on a specified separator.
+
+
+let str = "apple, banana, cherry";
+let fruits = str.split(", ");
+console.log(fruits); // Output: ["apple", "banana", "cherry"]
+
+Explanation: split() breaks the string into parts using , as the separator.
+
+___________________________________________________________________________
+
+
+String Search Methods
+21. indexOf()
+The indexOf() method returns the index of the first occurrence of a specified value.
+
+let str = "Hello World";
+console.log(str.indexOf("World")); // Output: 6
+
+Explanation: Finds the index of the substring "World", starting from position 6.
+
+___________________________________________________________________________
+
+
+22. lastIndexOf()
+The lastIndexOf() method returns the index of the last occurrence of a specified value.
+
+
+let str = "Hello World World";
+console.log(str.lastIndexOf("World")); // Output: 12
+
+Explanation: Finds the last occurrence of "World", which is at position 12.
+
+___________________________________________________________________________
+
+
+23. search()
+The search() method searches for a match between a string and a regular expression.
+
+let str = "Hello World!";
+console.log(str.search("World")); // Output: 6
+
+Explanation: Searches for the first occurrence of "World" using a regular expression and returns its index.
+
+___________________________________________________________________________
+
+
+24. match()
+The match() method retrieves the matches of a string against a regular expression.
+
+let str = "The rain in Spain stays mainly in the plain";
+let result = str.match(/ain/g);
+console.log(result); // Output: ["ain", "ain", "ain"]
+
+Explanation: match() finds all occurrences of "ain" and returns them as an array.
+
+___________________________________________________________________________
+
+
+25. matchAll()
+The matchAll() method returns an iterator of all matched results in a string.
+
+let str = "The rain in Spain stays mainly in the plain";
+let result = str.matchAll(/ain/g);
+for (let match of result) {
+    console.log(match);
+}
+// Output: ["ain"], ["ain"], ["ain"]
+
+Explanation: matchAll() returns an iterator for all occurrences of "ain" in the string.
+
+___________________________________________________________________________
+
+
+26. includes()
+The includes() method checks whether a string contains a specified substring.
+
+let str = "Hello World!";
+console.log(str.includes("World")); // Output: true
+
+Explanation: includes() returns true if the string contains "World".
+
+___________________________________________________________________________
+
+
+27. startsWith()
+The startsWith() method checks whether a string starts with a specified substring.
+
+let str = "Hello World!";
+console.log(str.startsWith("Hello")); // Output: true
+
+Explanation: startsWith() checks if the string begins with "Hello".
+
+___________________________________________________________________________
+
+
+28. endsWith()
+The endsWith() method checks whether a string ends with a specified substring.
+
+let str = "Hello World!";
+console.log(str.endsWith("!")); // Output: true
+
+Explanation: endsWith() checks if the string ends with "!".
+
+___________________________________________________________________________
+
+
+JavaScript Template Strings
+1. Backticks Syntax
+Template literals use backticks (`) instead of quotes to create strings.
+
+let str = `Hello World!`;
+
+Explanation: Template literals are enclosed in backticks, not quotes.
+
+___________________________________________________________________________
+
+
+2. Quotes Inside Strings
+Backticks allow both single and double quotes inside strings without escaping.
+
+let str = `He said, "Hello" and 'Goodbye'`;
+
+Explanation: Both types of quotes are allowed inside a template literal without the need for escape characters.
+
+___________________________________________________________________________
+
+
+3. Multiline Strings
+Template literals can create multiline strings directly, without needing escape characters like \n.
+
+let str = `This is
+a multiline
+string.`;
+
+Explanation: Template literals can span multiple lines directly.
+
+___________________________________________________________________________
+
+
+4. Interpolation
+You can embed expressions inside template literals using ${}.
+
+let name = "John";
+let greeting = `Hello, ${name}!`; 
+console.log(greeting); // Output: Hello, John!
+
+Explanation: ${} allows you to embed variables and expressions within a string.
+
+___________________________________________________________________________
